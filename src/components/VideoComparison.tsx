@@ -55,7 +55,9 @@ const VideoComparison: React.FC<VideoComparisonProps> = ({
   const updateSliderPosition = (e: MouseEvent | React.MouseEvent | Touch) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
+      // 兼容 MouseEvent 和 Touch
+      const clientX = "clientX" in e ? e.clientX : (e as Touch).clientX;
+      const x = clientX - rect.left;
       const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
       setSliderPosition(percentage);
     }
@@ -64,7 +66,8 @@ const VideoComparison: React.FC<VideoComparisonProps> = ({
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
     const touch = e.touches[0];
-    updateSliderPosition(touch);
+    // 直接传递 React.TouchEvent 给 updateSliderPosition，需兼容类型
+    updateSliderPosition(touch as unknown as Touch);
   };
 
   const handleTouchMove = (e: TouchEvent) => {
