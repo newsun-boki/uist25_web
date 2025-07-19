@@ -123,11 +123,11 @@ const VideoComparison: React.FC<VideoComparisonProps> = ({
     <div
       className={`bg-white rounded-lg border border-sky-200 shadow-[0_0_20px_rgba(186,230,253,0.2)] overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(186,230,253,0.3)] p-4 max-w-5xl mx-auto ${className}`}
     >
-      {/* {title && (
+      {title && (
         <h3 className="text-lg font-semibold mb-4 text-sky-800 text-center">
           {title}
         </h3>
-      )} */}
+      )}
 
       <div
         ref={containerRef}
