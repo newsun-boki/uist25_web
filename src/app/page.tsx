@@ -136,6 +136,13 @@ export default function Home() {
                 className: "mb-8",
                 extraImage: "/images/fire.png",
               },
+              {
+                beforeVideo: "/videos/style1.mp4",
+                afterVideo: "/videos/style0.mp4",
+                title: "Style",
+                className: "mb-8",
+                extraImage: "/images/style.png",
+              },
             ]}
           />
         </div>
