@@ -179,7 +179,7 @@ export default function Home() {
               </div>
             </div>
             {/* 第二列：两段视频，自适应 */}
-            <div className="flex flex-col gap-4 flex-1 min-w-0">
+            <div className="flex flex-col gap-4 flex-1 min-w-0 min-w-[400px]">
               <div className="h-[230px]">
                 <div className="aspect-[16/9] h-full">
                   <video
@@ -206,7 +206,7 @@ export default function Home() {
               </div>
             </div>
             {/* 第三列：两段视频，自适应 */}
-            <div className="flex flex-col gap-4 flex-1 min-w-0">
+            <div className="flex flex-col gap-4 flex-1 min-w-0 min-w-[400px]">
               <div className="h-[230px]">
                 <div className="h-[230px] aspect-[16/9] h-full">
                   <video
